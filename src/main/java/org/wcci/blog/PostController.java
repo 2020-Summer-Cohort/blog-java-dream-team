@@ -12,7 +12,8 @@ public class PostController {
     }
     @RequestMapping("posts/{postTitle}")
     public String showSinglePost(@PathVariable String postTitle, Model model){
-        model.addAttribute()
+        model.addAttribute("posts", postStorage.findPostsbyPostTitles(postTitle));
+        return "post-template";
 
 //
 //            @RequestMapping("reviews/{showTitle}")
