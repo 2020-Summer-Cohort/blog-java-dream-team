@@ -12,7 +12,7 @@ public class PostController {
     }
     @RequestMapping("posts/{postTitle}")
     public String showSinglePost(@PathVariable String postTitle, Model model){
-        model.addAttribute("posts", postStorage.findPostsbyPostTitles(postTitle));
+        model.addAttribute("posts", postStorage.findPostsbyTitle(postTitle));
         return "post-template";
 
 //

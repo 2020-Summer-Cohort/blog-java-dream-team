@@ -13,4 +13,5 @@ public class PostRepository {
         return postRepo.findPostbyAuthor(author);
 
     }
+    public Post findPostbyTitle(String title){ return postRepo.findPostbyTitle (title);}
 }
