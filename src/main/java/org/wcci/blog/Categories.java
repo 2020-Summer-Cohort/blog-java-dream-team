@@ -12,10 +12,7 @@ public class Categories {
     @GeneratedValue
     private long id;
     private String name;
-    @OneToMany(
-            mappedBy = "categories"
-    )
-    private Collection<Post> shows;
+
 
     protected Categories() {
     }
@@ -32,9 +29,7 @@ public class Categories {
         return this.id;
     }
 
-    public Collection<post> getPost() {
-        return this.post;
-    }
+
 
     public String toString() {
         return "Categories{id=" + this.id + ", name='" + this.name + "'}";
