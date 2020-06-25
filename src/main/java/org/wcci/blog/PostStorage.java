@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PostStorage {
     private PostRepository postRepo;
-    public PostStorage(PostRepository postRepo){ this.postRepo =postRepo}
+    public PostStorage(PostRepository postRepo){ this.postRepo =postRepo;}
     public Post findPostsbyTitle(String title){ return postRepo.findPostbyTitle(title); }
 }
 
