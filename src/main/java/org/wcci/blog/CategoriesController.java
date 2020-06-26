@@ -19,9 +19,9 @@ public class CategoriesController {
         return "categories-template";
     }
 
-    @RequestMapping({"categories/{categoryName}"})
-    public String showAdultAnimationShows(Model model, @PathVariable String categoryName) {
-        model.addAttribute("category", this.categoryStorage.findCategoriesByName(categoryName));
-        return "sub-category-template";
+//    @RequestMapping({"categories/{categoryName}"})
+//    public String showAdultAnimationShows(Model model, @PathVariable String categoryName) {
+//        model.addAttribute("category", this.categoryStorage.findCategoriesByName(categoryName));
+//        return "sub-category-template";
     }
 }
