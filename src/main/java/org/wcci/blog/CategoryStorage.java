@@ -10,11 +10,11 @@ public class CategoryStorage {
         this.categoriesRepo = categoriesRepo;
     }
 
-    public Categories findCategoriesByName(String name) {
+    public Category findCategoriesByName(String name) {
         return this.categoriesRepo.findByName(name);
     }
 
-    public Iterable<Categories> findAllCategories() {
+    public Iterable<Category> findAllCategories() {
         return this.categoriesRepo.findAll();
     }
 }

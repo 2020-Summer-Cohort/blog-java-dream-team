@@ -1,0 +1,21 @@
+package org.wcci.blog;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+
+@Component
+public class Populator implements CommandLineRunner {
+    @Autowired
+    CategoriesRepository categoriesRepo;
+    @Autowired
+    PostRepository postRepo;
+    @Override
+    public void run(String... args) throws Exception {
+        Category category1 = new Category("Fish");
+        categoriesRepo.save(category1);
+        Category category2 = new Category("Plants");
+        categoriesRepo.save(category2);
+    }
+}

@@ -3,21 +3,19 @@ package org.wcci.blog;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import java.util.Collection;
 
 @Entity
-public class Categories {
+public class Category {
     @Id
     @GeneratedValue
     private long id;
     private String name;
 
 
-    protected Categories() {
+    protected Category() {
     }
 
-    public Categories(String name) {
+    public Category(String name) {
         this.name = name;
     }
 
@@ -39,7 +37,7 @@ public class Categories {
         if (this == o) {
             return true;
         } else if (o != null && this.getClass() == o.getClass()) {
-            Categories categories = (Categories)o;
+            Category categories = (Category)o;
             if (this.id != categories.id) {
                 return false;
             } else {
