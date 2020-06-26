@@ -1,17 +1,8 @@
 package org.wcci.blog;
 
-import org.springframework.stereotype.Service;
+import org.springframework.data.repository.CrudRepository;
 
-@Service
-public class PostRepository {
-    private PostRepository postRepo;
-
-    public PostRepository(PostRepository postRepo){
-        this.postRepo =postRepo;
-    }
-    public Post findPostbyAuthor(String author){
-        return postRepo.findPostbyAuthor(author);
-
-    }
-    public Post findPostbyTitle(String title){ return postRepo.findPostbyTitle (title);}
+public interface PostRepository extends CrudRepository<Post, Long> {
+    Post findByPostByTitle(String title);
 }
+

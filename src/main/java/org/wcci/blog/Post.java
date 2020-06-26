@@ -21,8 +21,7 @@ public class Post {
 
     }
 
-    public Post(long id, String title, String author, String body, String publishDate, String genre) {
-        this.id = id;
+    public Post ( String title, String author, String body, String publishDate, String genre) {
         this.title = title;
         this.author = author;
         this.body = body;

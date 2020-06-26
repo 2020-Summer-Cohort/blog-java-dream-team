@@ -17,5 +17,7 @@ public class Populator implements CommandLineRunner {
         categoriesRepo.save(category1);
         Category category2 = new Category("Plants");
         categoriesRepo.save(category2);
+        Post post1 = new Post("foaewjfoi","author","stringbody","May 21, 1977","Rap");
+        postRepo.save(post1);
     }
 }
