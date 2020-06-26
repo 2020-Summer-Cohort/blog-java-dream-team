@@ -3,8 +3,8 @@ package org.wcci.blog;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface HashtagsRepository extends CrudRepository<Hashtags, Long> {
+public interface HashtagsRepository extends CrudRepository<Hashtag, Long> {
 
-    Hashtags findHashtagsByReviews(String hashtagName);
+    Hashtag findHashtagsByPost(String hashtagName);
 
 }

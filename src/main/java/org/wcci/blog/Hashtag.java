@@ -7,20 +7,20 @@ import javax.persistence.ManyToMany;
 import java.util.Collection;
 
 @Entity
-public class Hashtags {
+public class Hashtag {
 
     @Id
     @GeneratedValue
     private long id;
     private String hashtagName;
-//    @ManyToMany(mappedBy = "hashtags")
-//    private Collection<Post> posts;
+    @ManyToMany(mappedBy = "hashtag")
+    private Collection<Post> posts;
 
 
-    protected Hashtags() {
+    protected Hashtag() {
     }
 
-    public Hashtags(String hashtagName) {
+    public Hashtag(String hashtagName) {
         this.hashtagName = hashtagName;
     }
 
@@ -31,8 +31,8 @@ public class Hashtags {
     public String getHashtagName() {
         return hashtagName;
     }
-
-//    public Collection<Post> getReviews() {
+//
+//    public Collection<Post> getPost() {
 //        return Post;
 //    }
 }

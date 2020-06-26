@@ -11,14 +11,15 @@ public class Post {
     @Id
     @GeneratedValue
     private long id;
-
     private String title;
-
     private String author;
-
     private String body;
     private String publishDate;
     private String genre;
+
+    protected Post(){
+
+    }
 
     public Post(long id, String title, String author, String body, String publishDate, String genre) {
         this.id = id;
