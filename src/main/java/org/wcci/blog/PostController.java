@@ -1,7 +1,12 @@
 package org.wcci.blog;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.persistence.Id;
+
+@Controller
 
 public class PostController {
     private PostStorage postStorage;
@@ -12,13 +17,16 @@ public PostController(PostStorage postStorage, HashtagStorage hashtagStorage){
     this.hashtagstorage = hashtagStorage;
 }
 
-    public PostController(PostStorage postStorage) {
-        this.postStorage = postStorage;
-    }
-    @RequestMapping("posts/{postTitle}")
-    public String showSinglePost(@PathVariable String postTitle, Model model){
-        model.addAttribute("posts", postStorage.findPostsByTitle(postTitle));
+
+    @RequestMapping("post/{title}")
+    public String showSinglePost(@PathVariable String title, Model model){
+        model.addAttribute("post", postStorage.findPostsByTitle(title));
         return "post-template";
 
 }
+    @RequestMapping("hashtags/{hashtagID}")
+    public String showReviewsAssociatedWithHashtag(@PathVariable Long hashtagID, Model model) {
+        model.addAttribute("hashtag", hashtagstorage.findById(hashtagID));
+        return "hashtags-template"; //need to make a new template and insert instead
+    }
 }
