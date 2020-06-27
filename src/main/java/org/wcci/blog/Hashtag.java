@@ -14,7 +14,7 @@ public class Hashtag {
     private long id;
     private String hashtagName;
     @ManyToMany(mappedBy = "hashtag")
-    private Collection<Post> posts;
+    private Collection<Post>posts;
 
 
     protected Hashtag() {

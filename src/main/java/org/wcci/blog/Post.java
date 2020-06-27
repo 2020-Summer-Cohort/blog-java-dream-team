@@ -1,6 +1,7 @@
 package org.wcci.blog;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public class Post {
@@ -12,6 +13,8 @@ public class Post {
     private String body;
     private String publishDate;
     private String genre;
+    @ManyToMany
+    private Collection <Hashtag> hashtags;
 
     protected Post(){
 
