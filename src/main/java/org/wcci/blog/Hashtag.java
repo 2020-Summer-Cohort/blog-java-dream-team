@@ -13,7 +13,9 @@ public class Hashtag {
     @GeneratedValue
     private long id;
     private String hashtagName;
-    @ManyToMany(mappedBy = "hashtag")
+    @ManyToMany(
+            mappedBy = "hashtags"
+    )
     private Collection<Post>posts;
 
 
