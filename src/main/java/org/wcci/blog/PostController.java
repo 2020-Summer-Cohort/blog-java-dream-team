@@ -5,6 +5,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 public class PostController {
     private PostStorage postStorage;
+//    private HashtagStorage hashtagstorage;
+
+public PostController(){
+
+}
+//    private ReviewStorage reviewStorage;
+//    private HashtagsStorage hashtagsStorage;
+//
+//
+//    public ReviewsController(ReviewStorage reviewStorage, HashtagsStorage hashtagsStorage) {
+//        this.reviewStorage = reviewStorage;
+//        this.hashtagsStorage = hashtagsStorage;
+//    }
 
     public PostController(PostStorage postStorage) {
         this.postStorage = postStorage;
