@@ -28,7 +28,7 @@ public class BlogController {
 
     @RequestMapping("blogPosts/{postTitle}")
     public String showSingleReview(@PathVariable String postTitle, Model model) {
-        model.addAttribute("blogPosts", blogPostStorage.findReviewsByPostTitle(postTitle));
+       model.addAttribute("blogPosts", blogPostStorage.findReviewsByPostTitle(postTitle));
         return "blogpost-template";
     }
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/layout.css" rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet"/>
+
+    <title>Review Site</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1
+         th:text="${category.name}">
+        </h1>
+      </header>
+      <main>
+        <div class=>
+          <ul>
+          <li class="sub-category" th:each="animation: ${category.shows}">
+            <a class="sub-category" th:text= "${animation.postTitle}" th:href="@{'/blogPosts/'+${animation.postTitle}}"></a>
+<!--            //showtitle is red but working-->
+          </li>
+          </ul>
+        </div>
+      </main>
+      <footer>
+      <a href="/categories">Back To Categories!</a>
+      </footer>
+
+    </div>
+  </body>
+</html>
