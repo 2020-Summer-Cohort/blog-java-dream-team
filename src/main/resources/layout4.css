@@ -12,8 +12,8 @@ a {
 
   .container {
     display: grid;
-    grid-template-columns: repeat(3fr);
-    grid-template-rows: 100px repeat(3, 100x) 150px;
+    grid-template-columns: repeat(3 fr);
+    grid-template-rows: 100px repeat(3, 100px) 150px;
     grid-gap: 15px;
     text-align: center;
     margin: 0 auto;
