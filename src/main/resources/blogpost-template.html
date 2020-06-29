@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<link href="/layout.css" rel="stylesheet"/>
+<link href="/style.css" rel="stylesheet"/>
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="/layout.css" rel="stylesheet"/>
+    <link href="/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title th:text="${blogposts.postTitle}"></title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h2 th:each="BlogPosts: ${blogPosts}"></h2>
+        <h2 th:text="${blogPosts.postTitle}">
+
+        </h2>
+    </header>
+
+    <main>
+        <div class="super-jail">
+            <div class="super-jail-pic">
+                <img th:src="${blogPosts.imageUrl}">
+            </div>
+
+                <strong>
+                    <p>Date written:
+            <p th:text="${blogPosts.dateOfPost}">
+            </strong>
+        </p>
+        </div>
+
+            <p th:text="${blogPosts.bodyOfPost}"></p>
+<!--            <p th:text="${blogPosts.unused}"></p>-->
+        <!-- Labels / tags -->
+        <div class="w3-card w3-margin">
+            <div class="w3-container w3-padding">
+                <h4>Tags</h4>
+            </div>
+            <div class="w3-container w3-white">
+                <ul>
+                <li th:each="hashtags: ${blogPosts.hashtags}">
+
+                    <a th:text="${hashtags.hashtagName}" th:href="@{'/hashtags/'+${hashtags.id}}">
+
+                    </a>
+                    <form action="/hashtags/delete" method="POST" class="remove-button">
+                        <input type="hidden" name="hashtagId" th:value="${hashtags.id}">
+                        <input type="hidden" name="postTitle" th:value="${blogPosts.postTitle}">
+                        <button type="submit">x</button>
+                    </form>
+                    </p>
+                </li>
+                </ul>
+            </div>
+        </div>
+
+
+7yhh
+        </form>
+
+
+        </form>
+
+    </main>
+    <footer>
+        <a href="/categories">Back To Categories!</a>
+    </footer>
+</div>
+</body>
+</html>
