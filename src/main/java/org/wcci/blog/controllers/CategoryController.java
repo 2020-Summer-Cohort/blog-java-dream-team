@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wcci.blog.entities.AuthorC;
+import org.wcci.blog.entities.BlogPosts;
 import org.wcci.blog.entities.Categories;
 import org.wcci.blog.entities.Hashtags;
 import org.wcci.blog.storage.CategoryStorage;
@@ -40,15 +41,15 @@ public class CategoryController {
         return "sub-category-template";// category template th: text h1 element
     }
 
-//    @PostMapping("post/add")
-//    public String addNewPost(String title, String body, String authors, String tags, String categoryName) {
-//        Categories postCategory = categoryStorage.findCategoriesByName(categoryName);
-//        Collection<Hashtags> postTags = new ArrayList<Hashtags>();
-//        postTags.add (HashtagsStorage.findById(hashtagId));
+    @PostMapping("post/add")
+    public String addNewPost(String postTitle, String unused, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
+        Categories postCategory = categoryStorage.findCategoriesByName(categoryName);
+        Collection<Hashtags> postTags = new ArrayList<Hashtags>();
+        postTags.add (HashtagsStorage.findById(hashtagId));
 //        Collection<AuthorC> postAuthors = new ArrayList<AuthorC>();
 //        postAuthors.add(AuthorStorage.findbyName(postAuthors));
-//        PostC postToAdd = new PostC (title, body, postAuthors, postTags, postCategory);
-//      BlogPostStorage.save(postToAdd);
-//        return "redirect:/categories/" + postCategory.getName();
-//    }
+        BlogPosts postToAdd = new BlogPosts( postTitle,  unused,  dateOfPost,  bodyOfPost,  imageUrl, hashtags);
+      BlogPostStorage.save(postToAdd);
+        return "redirect:/categories/" + postCategory.getName();
+    }
 }

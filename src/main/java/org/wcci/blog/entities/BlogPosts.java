@@ -34,6 +34,7 @@ public class BlogPosts {
         this.hashtags = new ArrayList<>(Arrays.asList(hashtags));
     }
 
+
     public String getImageUrl() {
         return imageUrl;
     }
