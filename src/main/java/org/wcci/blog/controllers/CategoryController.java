@@ -40,15 +40,15 @@ public class CategoryController {
         return "sub-category-template";// category template th: text h1 element
     }
 
-    @PostMapping("post/add")
-    public String addNewPost(String title, String body, String authors, String tags, String categoryName) {
-        Categories postCategory = categoryStorage.findCategoriesByName(categoryName);
-        Collection<Hashtags> postTags = new ArrayList<Hashtags>();
-        postTags.add (HashtagsStorage.findById(hashtagId));
-        Collection<AuthorC> postAuthors = new ArrayList<AuthorC>();
-        postAuthors.add(AuthorStorage.findbyName(postAuthors));
-        PostC postToAdd = new PostC (title, body, postAuthors, postTags, postCategory);
-      BlogPostStorage.save(postToAdd);
-        return "redirect:/categories/" + postCategory.getName();
-    }
+//    @PostMapping("post/add")
+//    public String addNewPost(String title, String body, String authors, String tags, String categoryName) {
+//        Categories postCategory = categoryStorage.findCategoriesByName(categoryName);
+//        Collection<Hashtags> postTags = new ArrayList<Hashtags>();
+//        postTags.add (HashtagsStorage.findById(hashtagId));
+//        Collection<AuthorC> postAuthors = new ArrayList<AuthorC>();
+//        postAuthors.add(AuthorStorage.findbyName(postAuthors));
+//        PostC postToAdd = new PostC (title, body, postAuthors, postTags, postCategory);
+//      BlogPostStorage.save(postToAdd);
+//        return "redirect:/categories/" + postCategory.getName();
+//    }
 }

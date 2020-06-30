@@ -13,7 +13,7 @@ public class AuthorController {
     }
 
 
-    @RequestMapping("/author")
+    @RequestMapping("author")
     public String showAllAuthors(Model model){
         model.addAttribute("authors",authorStorage.findAllAuthorC());
         return "Author-template";
