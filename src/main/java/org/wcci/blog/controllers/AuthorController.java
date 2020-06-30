@@ -16,7 +16,7 @@ public class AuthorController {
     @RequestMapping("/author")
     public String showAllAuthors(Model model){
         model.addAttribute("authors",authorStorage.findAllAuthorC());
-        return "author-template";
+        return "Author-template";
     }
 //    @RequestMapping("authors/{authorName}")
 //    public String showSingleAuthor(Model model){

@@ -57,16 +57,6 @@ public class BlogController {
         return "redirect:/blogPosts/" + postTitle;
     }
 
-//    @PostMapping("post/add")
-//    public String addNewPost(String title, String body, String authors, String tags, String categoryName) {
-//        Categories postCategory = categoryStorage.findCategoriesByName(categoryName);
-//        Collection<Hashtags> postTags = new ArrayList<Hashtags>();
-//        postTags.add (hashtagsStorage.findById(hashtagId));
-//        Collection<AuthorC> postAuthors = new ArrayList<AuthorC>();
-//        postAuthors.add(AuthorStorage.findbyName(postAuthors));
-//        Post postToAdd = new Post(title, body, postAuthors, postTags, postCategory);
-//        ReviewStorage.save(postToAdd);
-//        return "redirect:/categories/" + postCategory.getName();
-//    }
+
 
 }

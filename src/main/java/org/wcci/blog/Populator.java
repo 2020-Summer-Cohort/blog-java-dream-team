@@ -4,21 +4,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import org.wcci.blog.entities.*;
-import org.wcci.blog.storage.repositories.*;
+
 
 
 @Component
 public class Populator implements CommandLineRunner {
     @Autowired
-    CategoriesRepository categoriesRepo;
+    org.wcci.blog.storage.repositories.CategoriesRepository categoriesRepo;
     @Autowired
-    BlogPostsRepository reviewRepo;
+    org.wcci.blog.storage.repositories.BlogPostsRepository reviewRepo;
     @Autowired
-    ShowsRepository showsRepo;
+    org.wcci.blog.storage.repositories.ShowsRepository showsRepo;
     @Autowired
-    HashtagsRepository hashtagsRepo;
+    org.wcci.blog.storage.repositories.HashtagsRepository hashtagsRepo;
     @Autowired
-    AuthorRepository authorRepo;
+    org.wcci.blog.storage.repositories.AuthorRepository authorRepo;
 
     @Override
     public void run(String... args) throws Exception {
