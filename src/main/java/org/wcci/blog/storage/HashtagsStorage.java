@@ -17,7 +17,7 @@ public class HashtagsStorage {
 //    public Hashtags findHashtagsByReviews(String hashtagName) {
 //        return hashtagsRepo.findHashtagsByReviews(hashtagName);
 //    }
-
+//
 //    public Iterable<Hashtags> findAllHashtags() {
 //        return hashtagsRepo.findAll();
 //    }

@@ -1,8 +1,12 @@
 package org.wcci.blog.storage;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.springframework.stereotype.Service;
 import org.wcci.blog.entities.AuthorC;
+import org.wcci.blog.entities.Hashtags;
 import org.wcci.blog.storage.repositories.AuthorRepository;
+
+import javax.persistence.Id;
 
 @Service
 public class AuthorStorage {
@@ -12,13 +16,20 @@ public class AuthorStorage {
         this.authorRepo = authorRepo;
     }
 
-    public Iterable<AuthorC> findAllAuthorC(){
-        return authorRepo.findAll();
-    }
-
+//    public Iterable<AuthorC> findAllAuthorC(){
+//        return authorRepo.finda.get();
+//    }
+//
 //    public AuthorC findPostsByAuthor(String authorName) {
 //        return authorRepo.findPostByAuthor(authorName);
 //    }
+public AuthorC findAuthorById(Long authorCID){
+        return authorRepo.findById(authorCID).get();
+}
+//    public Hashtags findById(Long hashtagID) {
+//        return hashtagsRepo.findById(hashtagID).get();
+//    }
+
 
     public void saveAuthorName(AuthorC authorC) {
         authorRepo.save(authorC);

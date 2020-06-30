@@ -155,7 +155,7 @@ p {
 
 li {
   list-style-type: none;
-  background-color: red;
+  background-color: var(--color3);
   padding: 20px;
 
 }
