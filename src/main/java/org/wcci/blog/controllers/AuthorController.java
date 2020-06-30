@@ -13,10 +13,15 @@ public class AuthorController {
     }
 
 
-    @RequestMapping("author")
+    @RequestMapping("/author")
     public String showAllAuthors(Model model){
-        model.addAttribute("authorName",authorStorage.findAllAuthorC());
+        model.addAttribute("authors",authorStorage.findAllAuthorC());
         return "author-template";
     }
+//    @RequestMapping("authors/{authorName}")
+//    public String showSingleAuthor(Model model){
+//        model.addAttribute("authorName",authorStorage.findPostsByAuthor(String authorName));
+//        return "individual-author-template";
+//    }
 
 }

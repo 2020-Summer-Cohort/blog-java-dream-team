@@ -5,11 +5,7 @@ import org.wcci.blog.entities.AuthorC;
 
 
 public interface AuthorRepository extends CrudRepository<AuthorC,Long> {
-    default AuthorC findPostByAuthor(String authorName) {
-        return null;
-    }
+//     AuthorC findPostByAuthor(String authorName);
 
 }
-//public interface CategoriesRepository extends CrudRepository<Categories, Long> {
-//    Categories findByName(String name);
-//}
+
