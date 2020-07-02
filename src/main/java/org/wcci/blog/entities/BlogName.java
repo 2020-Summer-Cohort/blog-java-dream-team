@@ -10,8 +10,8 @@ public class BlogName {
         @GeneratedValue
         private long id;
         private String postTitle;
-        @OneToMany
-        private Collection<BlogPosts> blogPosts;
+        @ManyToMany
+        private Collection<AuthorC> authorCS;
         @ManyToOne
         private Categories categories;
 
@@ -36,7 +36,7 @@ public class BlogName {
         return categories;
     }
 
-    public Collection<BlogPosts> getReviews() {
-        return blogPosts;
-    }
+//    public Collection<BlogPosts> getReviews() {
+//        return blogPosts;
+//    }
 }

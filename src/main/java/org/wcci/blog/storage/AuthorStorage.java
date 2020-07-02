@@ -23,9 +23,10 @@ public class AuthorStorage {
 //    public AuthorC findPostsByAuthor(String authorName) {
 //        return authorRepo.findPostByAuthor(authorName);
 //    }
-public AuthorC findAuthorById(Long authorCID){
-        return authorRepo.findById(authorCID).get();
-}
+//public AuthorC findAuthorById(Long authorCID){
+//        return authorRepo.findById2(authorCID);
+//}
+
 //    public Hashtags findById(Long hashtagID) {
 //        return hashtagsRepo.findById(hashtagID).get();
 //    }

@@ -4,9 +4,9 @@ import org.springframework.data.repository.CrudRepository;
 import org.wcci.blog.entities.AuthorC;
 
 
-public interface AuthorRepository extends CrudRepository<AuthorC,Long> {
+public interface AuthorRepository extends CrudRepository<AuthorC, Long> {
 //    AuthorC findPostByAuthor(String authorName);
-//     AuthorC
+//    AuthorC findById2 (Long authorCID);
 
 }
 

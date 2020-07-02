@@ -3,28 +3,38 @@ package org.wcci.blog.storage;
 
 import org.springframework.stereotype.Service;
 import org.wcci.blog.entities.BlogPosts;
+import org.wcci.blog.entities.Hashtags;
 import org.wcci.blog.storage.repositories.BlogPostsRepository;
 
 
 @Service
 public class BlogPostStorage {
 
-    BlogPostsRepository reviewRepo;
+    BlogPostsRepository blogpostRepo;
+    BlogPosts blogPosts;
 
-    public BlogPostStorage(BlogPostsRepository reviewRepo) {
-        this.reviewRepo = reviewRepo;
+    public BlogPostStorage(BlogPostsRepository blogpostRepo) {
+        this.blogpostRepo = blogpostRepo;
     }
 
+//    public add(BlogPosts postToAdd) {
+//        blogPosts.add(postToAdd);
+//
+//    }
+//
+//    public void addHashtag(Hashtags hashtagToAdd) {
+//        hashtags.add(hashtagToAdd);
+//    }
     public BlogPosts findReviewsByPostTitle(String postTitle) {
-        return reviewRepo.findByPostTitle(postTitle);
+        return blogpostRepo.findByPostTitle(postTitle);
     }
 
     public Iterable<BlogPosts> findAllReviews() {
-        return reviewRepo.findAll();
+        return blogpostRepo.findAll();
     }
 
     public void save(BlogPosts blogPosts) {
-        reviewRepo.save(blogPosts);
+        blogpostRepo.save(blogPosts);
     }
 
 

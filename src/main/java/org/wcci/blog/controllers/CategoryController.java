@@ -41,15 +41,13 @@ public class CategoryController {
         return "sub-category-template";// category template th: text h1 element
     }
 
-//    @PostMapping("post/add")
-//    public String addNewPost(String postTitle, String unused, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
-//        Categories postCategory = categoryStorage.findCategoriesByName(categoryName);
-//        Collection<Hashtags> postTags = new ArrayList<Hashtags>();
-//        postTags.add (HashtagsStorage.findById(hashtagId));
-//        BlogPosts postToAdd = new BlogPosts( postTitle,  unused,  dateOfPost,  bodyOfPost,  imageUrl, hashtags);
-//      BlogPostStorage.save(postToAdd);
-//      a
-//        return "redirect:/categories/" + postCategory.getName();
-//    }
-//
+        @PostMapping("post/add")
+        public String addNewPost(String postTitle, String unused, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
+            Collection<Hashtags> postTags = new ArrayList<Hashtags>();
+            BlogPosts postToAdd = new BlogPosts( postTitle,  unused,  dateOfPost,  bodyOfPost,  imageUrl, hashtags);
+//            BlogPostStorage.add(postToAdd);
+//            BlogPostStorage.save(postToAdd);
+            return "redirect:/categories/" + postTitle;
+        }
+
 }

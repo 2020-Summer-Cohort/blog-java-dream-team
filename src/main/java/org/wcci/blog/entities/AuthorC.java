@@ -10,8 +10,8 @@ public class AuthorC {
     @GeneratedValue
     private long id;
     private String authorName;
-    @OneToMany (mappedBy = "authorC")
-    private Collection<BlogPosts> blogPosts;
+    @ManyToMany
+    private Collection <BlogPosts> blogPosts;
     @ManyToOne
     private Categories categories;
 

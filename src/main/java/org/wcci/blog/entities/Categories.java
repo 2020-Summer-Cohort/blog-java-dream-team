@@ -35,6 +35,14 @@ public class Categories {
         return shows;
     }
 
+//    public void addBlogPost(BlogPosts blogPosts){
+//        blogPosts.add(blogpostToAdd);
+//    }
+
+//    public void addHashtag(Hashtags hashtagToAdd) {
+//        hashtags.add(hashtagToAdd);
+//    }
+
     @Override
     public String toString() {
         return "Categories{" +

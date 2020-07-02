@@ -18,7 +18,8 @@
     <ul>
         <li class="categories" th:each="author: ${authorC}">
             <a class="categories" th:text= "${authorC.authorName}" th:href="@{'/authors/'+${authorC.authorName}}"></a>
-        </li
+        </li>
+        </ul>
     </main>
     <footer>
         <a href="/categories">Back To Categories!</a>
