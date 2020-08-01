@@ -16,9 +16,9 @@ public class AuthorStorage {
     }
 
 
-    public Author findPostsByAuthor(String authorName) {
-        return authorRepo.findPostByAuthor(authorName);
-    }
+//    public Author findPostsByAuthor(String authorName) {
+//        return authorRepo.findPostByAuthor(authorName);
+//    }
 
     public Hashtags findById(Long hashtagID) {
         return hashtagsRepo.findById(hashtagID).get();

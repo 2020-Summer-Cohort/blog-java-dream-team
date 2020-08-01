@@ -6,6 +6,6 @@ import org.wcci.blog.entities.Author;
 
 
 public interface AuthorRepository extends CrudRepository<Author, Long> {
-    Author findPostByAuthor(String authorName);
+//    Author findPostByAuthor(String authorName);
 }
 

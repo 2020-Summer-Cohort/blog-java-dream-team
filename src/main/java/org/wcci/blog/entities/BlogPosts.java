@@ -14,6 +14,7 @@ public class BlogPosts {
     private String unused;
     private String dateOfPost;
     @Lob
+    private String author;
     private String bodyOfPost;
     private String imageUrl;
     private String postTitle;
@@ -25,15 +26,15 @@ public class BlogPosts {
     protected BlogPosts() {
     }
 
-    public BlogPosts(Author authorC,String postTitle, String unused, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
-       this.authorC=authorC;
+    public BlogPosts(String author,String postTitle, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
+        this.author = author;
         this.postTitle = postTitle;
-        this.unused = unused;
         this.dateOfPost = dateOfPost;
         this.bodyOfPost = bodyOfPost;
         this.imageUrl = imageUrl;
         this.hashtags = new ArrayList<>(Arrays.asList(hashtags));
     }
+
 
 
     public String getImageUrl() {

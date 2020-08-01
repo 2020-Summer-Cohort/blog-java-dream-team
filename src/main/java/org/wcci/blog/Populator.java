@@ -50,23 +50,23 @@ public class Populator implements CommandLineRunner {
         hashtagsRepo.save(hashtag3);
 
 
-        BlogPosts review1 = new BlogPosts(jason,"Poecilia reticulata", "★★★", "November 18, 1998",
+        BlogPosts review1 = new BlogPosts("jason","Poecilia reticulata",  "November 18, 1998",
                 "My brother got some new guppies today. They are snake skin guppies. They look nice" +
                         " I think the guppies are picking on one of the snails and may kill it. ",
                 "/images/guppy.png", hashtag1, hashtag3);
 
-        BlogPosts review2 = new BlogPosts("Apistogramma", "★★★★★", "November 4, 2013",
+        BlogPosts review2 = new BlogPosts("jason","Apistogramma", "November 4, 2013",
                 "I bought some fish at the local aquarium auction today"+"they are called Apistogramma hongsloi, they are"+
                 "most closely related to the Apistogramma panduro"+ "they are nice dwarf cichlids from South America",
                 "/images/apistogramma.png", hashtag1, hashtag3);
 
-//        BlogPosts review3 = new BlogPosts("Man in Tree", "★★★★", "September 28, 2008",
-//                "Today I saw a man in a tree." +
-//                        "  I don't know why this person was in a tree" +
-//                        " He was just randomly yelling at the birds in the tree. " +
-//                        "Very odd and funny",
-//                "/images/manintree.jpg",
-//                hashtag1, hashtag2);
+        BlogPosts review3 = new BlogPosts("author2","Man in Tree",  "September 28, 2008",
+                "Today I saw a man in a tree." +
+                        "  I don't know why this person was in a tree" +
+                        " He was just randomly yelling at the birds in the tree. " +
+                        "Very odd and funny",
+                "/images/manintree.jpg",
+                hashtag1, hashtag2);
 
 
         BlogPosts review5 = new BlogPosts("Weird Dream 2", "★★★★", "December 30, 2000",

@@ -13,11 +13,11 @@ public class AuthorController {
         this.authorStorage=authorStorage;
     }
 
-    @RequestMapping("author/{authorCID}")
-    public String showAllAuthors(@PathVariable String authorName, Model model){
-        model.addAttribute("authors",authorStorage.findPostsByAuthor(authorName));
-        return "Author-template";
-    }
+//    @RequestMapping("author/{authorCID}")
+//    public String showAllAuthors(@PathVariable String authorName, Model model){
+//        model.addAttribute("authors",authorStorage.findPostsByAuthor(authorName));
+//        return "Author-template";
+//    }
 
 
 }
