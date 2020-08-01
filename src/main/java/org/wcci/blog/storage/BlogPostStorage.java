@@ -17,6 +17,7 @@ public class BlogPostStorage {
         this.blogpostRepo = blogpostRepo;
     }
 
+
     public BlogPosts findReviewsByPostTitle(String postTitle) {
         return blogpostRepo.findByPostTitle(postTitle);
     }

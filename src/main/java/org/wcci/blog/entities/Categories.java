@@ -38,7 +38,7 @@ public class Categories {
 //    public void addBlogPost(BlogPosts blogPosts){
 //        blogPosts.add(blogpostToAdd);
 //    }
-
+//
 //    public void addHashtag(Hashtags hashtagToAdd) {
 //        hashtags.add(hashtagToAdd);
 //    }

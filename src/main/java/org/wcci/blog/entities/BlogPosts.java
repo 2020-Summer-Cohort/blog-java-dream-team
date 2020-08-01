@@ -42,10 +42,6 @@ public class BlogPosts {
     }
 
 
-    public String getUnused() {
-        return unused;
-    }
-
     public String getDateOfPost() {
         return dateOfPost;
     }
@@ -80,4 +76,12 @@ public class BlogPosts {
     }
 
     public void removeHashtag(Hashtags hashtagsToRemove) {hashtags.remove(hashtagsToRemove); }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 }
