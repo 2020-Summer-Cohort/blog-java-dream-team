@@ -17,14 +17,6 @@ public class BlogPostStorage {
         this.blogpostRepo = blogpostRepo;
     }
 
-//    public add(BlogPosts postToAdd) {
-//        blogPosts.add(postToAdd);
-//
-//    }
-//
-//    public void addHashtag(Hashtags hashtagToAdd) {
-//        hashtags.add(hashtagToAdd);
-//    }
     public BlogPosts findReviewsByPostTitle(String postTitle) {
         return blogpostRepo.findByPostTitle(postTitle);
     }

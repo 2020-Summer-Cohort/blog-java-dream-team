@@ -1,12 +1,11 @@
 package org.wcci.blog.storage.repositories;
 
 import org.springframework.data.repository.CrudRepository;
-import org.wcci.blog.entities.AuthorC;
+import org.wcci.blog.entities.Author;
 
 
-public interface AuthorRepository extends CrudRepository<AuthorC, Long> {
-//    AuthorC findPostByAuthor(String authorName);
-//    AuthorC findById2 (Long authorCID);
 
+public interface AuthorRepository extends CrudRepository<Author, Long> {
+    Author findPostByAuthor(String authorName);
 }
 

@@ -11,7 +11,7 @@ public class BlogName {
         private long id;
         private String postTitle;
         @ManyToMany
-        private Collection<AuthorC> authorCS;
+        private Collection<Author> authorCS;
         @ManyToOne
         private Categories categories;
 

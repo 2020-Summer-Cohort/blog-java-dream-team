@@ -20,6 +20,7 @@ public class Populator implements CommandLineRunner {
     @Autowired
     org.wcci.blog.storage.repositories.AuthorRepository authorRepo;
 
+
     @Override
     public void run(String... args) throws Exception {
         Categories currentCategory = new Categories("Current Events");
@@ -49,7 +50,7 @@ public class Populator implements CommandLineRunner {
         hashtagsRepo.save(hashtag3);
 
 
-        BlogPosts review1 = new BlogPosts("Poecilia reticulata", "★★★", "November 18, 1998",
+        BlogPosts review1 = new BlogPosts(jason,"Poecilia reticulata", "★★★", "November 18, 1998",
                 "My brother got some new guppies today. They are snake skin guppies. They look nice" +
                         " I think the guppies are picking on one of the snails and may kill it. ",
                 "/images/guppy.png", hashtag1, hashtag3);
@@ -96,8 +97,8 @@ public class Populator implements CommandLineRunner {
         reviewRepo.save(review8);
 
 
-        AuthorC author1 = new AuthorC("wofejiiwea");
-        authorRepo.save(author1);
+        Author jason = new Author("wofejiiwea");
+        authorRepo.save(jason);
 
 
     }

@@ -1,42 +1,35 @@
 package org.wcci.blog.storage;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.springframework.stereotype.Service;
-import org.wcci.blog.entities.AuthorC;
+import org.wcci.blog.entities.Author;
 import org.wcci.blog.entities.Hashtags;
 import org.wcci.blog.storage.repositories.AuthorRepository;
-
-import javax.persistence.Id;
+import org.wcci.blog.storage.repositories.HashtagsRepository;
 
 @Service
 public class AuthorStorage {
     AuthorRepository authorRepo;
+    HashtagsRepository hashtagsRepo;
 
     public AuthorStorage(AuthorRepository authorRepo) {
         this.authorRepo = authorRepo;
     }
 
-//    public Iterable<AuthorC> findAllAuthorC(){
-//        return authorRepo.finda.get();
-//    }
-//
-//    public AuthorC findPostsByAuthor(String authorName) {
-//        return authorRepo.findPostByAuthor(authorName);
-//    }
-//public AuthorC findAuthorById(Long authorCID){
-//        return authorRepo.findById2(authorCID);
-//}
 
-//    public Hashtags findById(Long hashtagID) {
-//        return hashtagsRepo.findById(hashtagID).get();
-//    }
+    public Author findPostsByAuthor(String authorName) {
+        return authorRepo.findPostByAuthor(authorName);
+    }
+
+    public Hashtags findById(Long hashtagID) {
+        return hashtagsRepo.findById(hashtagID).get();
+    }
 
 
-    public void saveAuthorName(AuthorC authorC) {
+    public void saveAuthorName(Author authorC) {
         authorRepo.save(authorC);
     }
 
-    public void removeAuthorName(AuthorC authorC) {
+    public void removeAuthorName(Author authorC) {
         authorRepo.delete(authorC);
     }
 }

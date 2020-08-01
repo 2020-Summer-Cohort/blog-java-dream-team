@@ -5,14 +5,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.wcci.blog.entities.AuthorC;
 import org.wcci.blog.entities.BlogPosts;
-import org.wcci.blog.entities.Categories;
 import org.wcci.blog.entities.Hashtags;
-import org.wcci.blog.storage.CategoryStorage;
-import org.wcci.blog.storage.AuthorStorage;
-import org.wcci.blog.storage.HashtagsStorage;
 import org.wcci.blog.storage.BlogPostStorage;
+import org.wcci.blog.storage.CategoryStorage;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -28,6 +24,10 @@ public class CategoryController {
 
         this.categoryStorage = categoryStorage;
     }
+//    public BlogPostStorage(BlogPostStorage blogPostStorage) {
+//
+//        this.blogPostStorage = blogPostStorage;
+//    }
 
     @RequestMapping("categories")
     public String showAllCategories(Model model) {
@@ -41,13 +41,13 @@ public class CategoryController {
         return "sub-category-template";// category template th: text h1 element
     }
 
-        @PostMapping("post/add")
-        public String addNewPost(String postTitle, String unused, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
-            Collection<Hashtags> postTags = new ArrayList<Hashtags>();
-            BlogPosts postToAdd = new BlogPosts( postTitle,  unused,  dateOfPost,  bodyOfPost,  imageUrl, hashtags);
+//        @PostMapping("post/add")
+//        public String addNewPost(String postTitle, String unused, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
+//            Collection<Hashtags> postTags = new ArrayList<Hashtags>();
+//            BlogPosts postToAdd = new BlogPosts( postTitle,  unused,  dateOfPost,  bodyOfPost,  imageUrl, hashtags);
 //            BlogPostStorage.add(postToAdd);
 //            BlogPostStorage.save(postToAdd);
-            return "redirect:/categories/" + postTitle;
-        }
+//            return "redirect:/categories/" + postTitle;
+//        }
 
 }

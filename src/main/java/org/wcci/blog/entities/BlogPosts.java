@@ -20,12 +20,13 @@ public class BlogPosts {
     @ManyToMany
     private Collection<Hashtags> hashtags;
     @ManyToOne
-    private AuthorC authorC;
+    private Author authorC;
 
     protected BlogPosts() {
     }
 
-    public BlogPosts(String postTitle, String unused, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
+    public BlogPosts(Author authorC,String postTitle, String unused, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
+       this.authorC=authorC;
         this.postTitle = postTitle;
         this.unused = unused;
         this.dateOfPost = dateOfPost;
