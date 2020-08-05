@@ -11,23 +11,27 @@ public class BlogPosts {
     @Id
     @GeneratedValue
     private long id;
-    private String unused;
     private String dateOfPost;
     @Lob
-    private String author;
+//    private String author;
     private String bodyOfPost;
     private String imageUrl;
     private String postTitle;
     @ManyToMany
     private Collection<Hashtags> hashtags;
-    @ManyToOne
-    private Author authorC;
+
+    public Author getAuthorC() {
+        return authorC;
+    }
+
+    @ManyToMany
+    private Collection<Author> author;
 
     protected BlogPosts() {
     }
 
-    public BlogPosts(String author,String postTitle, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
-        this.author = author;
+    public BlogPosts(Author authors,String postTitle, String dateOfPost, String bodyOfPost, String imageUrl, Hashtags... hashtags) {
+        this.authors = new ArrayList<>(Arrays.asList(authors));
         this.postTitle = postTitle;
         this.dateOfPost = dateOfPost;
         this.bodyOfPost = bodyOfPost;
@@ -41,6 +45,9 @@ public class BlogPosts {
         return imageUrl;
     }
 
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 
     public String getDateOfPost() {
         return dateOfPost;
@@ -81,7 +88,5 @@ public class BlogPosts {
         return author;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+
 }

@@ -9,14 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="./static/layout.css" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title th:text="${author}"></title>
 </head>
 <body>
 <div class="container">
 
     <ul>
-        <h2 th:each="BlogPosts: ${author}"></h2>
-            <a class="categories" th:text= "${authorC.authorName}" th:href="@{'/authors/'+${authorC.authorName}}"></a>
+        <h2 th:each="blogPosts: ${blogPosts.author}"></h2>
         </li>
         </ul>
     </main>
